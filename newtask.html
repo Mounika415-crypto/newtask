@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="newtak.css">
+   
+</head>
+
+ 
+<body>
+    <div>
+    <button onclick="printTask"> CLICK ME </button>
+    <input type="text" id="task1"></input>
+    
+
+    <p id="printedText"></p>
+    <script type="text/javascript">
+        var color = ["#222f3e", "#f368e0", "#ee5253", "#10ac84"];
+        let text;
+        var i = 0;
+        document.querySelector("button").addEventListener("click", function () {
+            alert("hello mounikha")
+
+            text = document.getElementById("task1").value;
+            document.getElementById("printedText").innerHTML = text;
+            i = i < color.length ? ++i : 0;
+            document.querySelector("body").style.background = color[i];
+        })
+    </script>
+    </div>
+    
+
+</body>
+
+</html>
